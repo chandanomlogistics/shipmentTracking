@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@//10.10.130.177:1521/SCMUAT
+    username: OLL
+    password: TECHINFOTECH
+    driver-class-name: oracle.jdbc.OracleDriver
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
+        format_sql: true
+
+logging:
+#  file:
+#    name: logs/retryExtension-logs.log
+  level:
+    root: INFO
+    com.om.EWayBillExtentonUtill: DEBUG
+#    org.springframework.kafka: WARN
+#    org.hibernate.SQL: DEBUG
