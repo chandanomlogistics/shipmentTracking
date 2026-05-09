@@ -40,7 +40,7 @@ public class ShipmentSyncService {
     /**
      * Scheduler: runs every hour, 24 hours a day
      */
-//    @Scheduled(cron = "0 0 * * * ?")
+    @Scheduled(cron = "0 0 * * * ?")
     public void scheduleShipmentSync() {
         log.info("Starting scheduled Lenovo shipment sync at {}", LocalDateTime.now());
         try {
